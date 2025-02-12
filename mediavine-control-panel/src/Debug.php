@@ -65,6 +65,7 @@ class Debug {
 			'mcp_block_mixed_content'                => Option::get_instance()->get_option( 'block_mixed_content' ),
 			'mcp_disable_admin_ads'                  => Option::get_instance()->get_option( 'disable_admin_ads' ),
 			'mcp_enable_forced_ssl'                  => Option::get_instance()->get_option( 'enable_forced_ssl' ),
+			'mcp_enable_gpt_snippet'                 => Option::get_instance()->get_option( 'enable_gpt_snippet' ),
 			'mcp_enable_web_story_ads'               => Option::get_instance()->get_option( 'enable_web_story_ads' ),
 			'mcp_google'                             => Option::get_instance()->get_option( 'google' ),
 			'mcp_has_loaded_before'                  => Option::get_instance()->get_option( 'has_loaded_before' ),
@@ -108,12 +109,12 @@ class Debug {
 	/**
 	 * Decode HTML Entities.
 	 *
-	 * @param array $array entities for html decode.
+	 * @param array $entities entities for html decode.
 	 */
-	public function array_decode_entities( $array ) {
+	public function array_decode_entities( $entities ) {
 		$new_array = array();
 
-		foreach ( $array as $key => $string ) {
+		foreach ( $entities as $key => $string ) {
 			if ( is_string( $string ) ) {
 				$new_array[ $key ] = html_entity_decode( $string, ENT_QUOTES );
 			} else {

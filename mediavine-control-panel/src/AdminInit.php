@@ -279,5 +279,4 @@ class AdminInit {
 		$new_text = str_ireplace( array_keys( $shortcode_text ), $shortcode_text, $text );
 		return $new_text;
 	}
-
 }

@@ -19,5 +19,4 @@ class Migrate_2_10_3 extends Migrate {
 			Option::get_instance()->update_option( 'seen_launch_success_message', true );
 		}
 	}
-
 }

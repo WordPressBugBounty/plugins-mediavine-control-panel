@@ -205,11 +205,11 @@ class Migration {
 	 *
 	 * @param mixed  $pre_option The value to return instead of the option value.
 	 * @param string $option The option name.
-	 * @param mixed  $default The fallback value to return if the option does not exist.
+	 * @param mixed  $fallback The fallback value to return if the option does not exist.
 	 *
 	 * @return false|mixed
 	 */
-	public function get_option_by_old_key( $pre_option, $option, $default ) {
+	public function get_option_by_old_key( $pre_option, $option, $fallback ) {
 		if ( $this->skip_old_key_map ) {
 			return false;
 		}
@@ -228,7 +228,7 @@ class Migration {
 				),
 				E_USER_DEPRECATED
 			);
-			return get_option( $this->old_key_map[ $option ], $default );
+			return get_option( $this->old_key_map[ $option ], $fallback );
 		}
 
 		return false;

@@ -17,15 +17,15 @@ class Utility {
 	/**
 	 * Remove null variables.
 	 *
-	 * @param array $array loopable variables.
+	 * @param array $arr loopable variables.
 	 *
 	 * @return array
 	 */
-	public function filter_null( $array ) {
+	public function filter_null( $arr ) {
 		return array_filter(
-			$array,
-			function ( $var ) {
-				return ! is_null( $var );
+			$arr,
+			function ( $value ) {
+				return ! is_null( $value );
 			}
 		);
 	}
@@ -33,14 +33,14 @@ class Utility {
 	/**
 	 * Get value or return null.
 	 *
-	 * @param array  $array list of variables.
+	 * @param array  $arr list of variables.
 	 * @param string $index index being looked for.
 	 *
 	 * @return null|array
 	 */
-	public function get_or_null( $array, $index ) {
-		if ( array_key_exists( $index, $array ) ) {
-			return $array[ $index ];
+	public function get_or_null( $arr, $index ) {
+		if ( array_key_exists( $index, $arr ) ) {
+			return $arr[ $index ];
 		}
 
 		return null;
@@ -134,6 +134,4 @@ class Utility {
 		</div>
 		<?php
 	}
-
-
 }

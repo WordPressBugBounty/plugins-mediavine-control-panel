@@ -430,9 +430,9 @@ class Upstream {
 		self::clear_launch_mode_cache();
 
 		wp_send_json_success(
-			[
+			array(
 				'launch_mode' => self::get_launch_mode(),
-			],
+			),
 			200
 		);
 	}
@@ -682,16 +682,16 @@ class Upstream {
 	/**
 	 * Ensures WP Cron has needed interval definitions.
 	 *
-	 * @param array $array An array of non-default cron schedule arrays.
+	 * @param array $schedule An array of non-default cron schedule arrays.
 	 *
 	 * @return array
 	 */
-	public function add_interval_to_scheduler( $array ) {
-		$array['quarter_hourly'] = array(
+	public function add_interval_to_scheduler( $schedule ) {
+		$schedule['quarter_hourly'] = array(
 			'interval' => MINUTE_IN_SECONDS * 15,
 			'display'  => __( 'Every 15 Minutes' ),
 		);
-		return $array;
+		return $schedule;
 	}
 
 	/**

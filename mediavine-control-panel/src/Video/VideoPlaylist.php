@@ -121,7 +121,7 @@ class VideoPlaylist {
 			'sticky'               => '',
 			'autoplay'             => '',
 			'disable_auto_upgrade' => '',
-			'volume'               => 'data-volume="70"',
+			'volume'               => '',
 			'jsonld'               => 'data-disable-jsonld="1"',
 			'ratio'                => '',
 		);
@@ -130,17 +130,20 @@ class VideoPlaylist {
 			$settings['id'] = esc_attr( $attributes['id'] );
 		}
 
-		if ( $this->isset_and_true( $attributes['donotoptimizeplacement'] ) ) {
-			$settings['sticky']   = 'data-sticky="1"';
-			$settings['autoplay'] = 'data-autoplay="1"';
+		// Setting deprecated in 2.10.0. If a playlist has this attribute, do not render it.
+		if ( isset( $attributes['donotoptimizeplacement'] ) ) {
+			$settings['sticky']   = '';
+			$settings['autoplay'] = '';
 		}
 
-		if ( $this->isset_and_true( $attributes['donotautoplaynoroptimizeplacement'] ) ) {
-			$settings['disable_auto_upgrade'] = 'data-disable-auto-upgrade="1"';
+		// Setting deprecated in 2.10.0. If a playlist has this attribute, do not render it.
+		if ( isset( $attributes['donotautoplaynoroptimizeplacement'] ) ) {
+			$settings['disable_auto_upgrade'] = '';
 		}
 
+		// Setting deprecated in 2.10.0. If a playlist has this attribute, do not render it.
 		if ( isset( $attributes['volume'] ) ) {
-			$settings['volume'] = 'data-volume="' . esc_attr( $attributes['volume'] ) . '"';
+			$settings['volume'] = '';
 		}
 
 		if ( $this->isset_and_true( $attributes['jsonld'] ) ) {

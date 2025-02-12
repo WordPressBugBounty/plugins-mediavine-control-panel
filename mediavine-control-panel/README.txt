@@ -3,7 +3,7 @@ Contributors: mediavine
 Donate link: https://www.mediavine.com
 Tags: advertising, mediavine
 Requires at least: 5.2
-Tested up to: 6.6
+Tested up to: 6.6.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -52,9 +52,18 @@ Program](https://patchstack.com/database/vdp/mediavine-control-panel). The Patch
 assist you with verification, CVE assignment, and notify the
 developers of this plugin.
 
-== Screenshots ==
-
 == Changelog ==
+
+= 2.10.6 =
+
+- NEW:  Added “Refresh videos” button to refresh the list of videos available for insertion into posts.
+- NEW:  Video thumbnail image and title in individual video view link to individual video edit page on https://reporting.mediavine.com to edit individual video details.
+- NEW:  Added “Refresh playlists” button to refresh the list of playlists available for insertion into posts.
+- NEW:  Playlist thumbnail image in individual playlist view links to individual playlist edit page on https://reporting.mediavine.com to edit individual playlist details.
+- CHANGED:  Users are directed to https://reporting.mediavine.com to upload new videos.
+- CHANGED:  Users are directed to https://reporting.mediavine.com to create new playlists.
+- REMOVED:  Removed the ability to upload videos directly inside the plugin.
+- REMOVED:  Took out the ability to create new playlists directly inside the plugin.
 
 = 2.10.5 =
 

@@ -134,5 +134,4 @@ class Migrate_2_9_0 extends Migrate {
 			delete_option( $deletion );
 		}
 	}
-
 }

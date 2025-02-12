@@ -15,6 +15,4 @@ abstract class Migrate {
 	 * Performs the tasks required to move to this version of MCP.
 	 */
 	abstract public function run_migration();
-
-
 }

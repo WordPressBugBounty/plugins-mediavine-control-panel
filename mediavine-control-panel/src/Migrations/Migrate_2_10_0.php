@@ -13,7 +13,5 @@ class Migrate_2_10_0 extends Migrate {
 	 * Performs the tasks required to move to MCP 2.10.0.
 	 */
 	public function run_migration() {
-
 	}
-
 }

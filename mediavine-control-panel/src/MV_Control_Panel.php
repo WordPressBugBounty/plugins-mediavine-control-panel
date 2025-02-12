@@ -25,12 +25,12 @@ class MV_Control_Panel {
 	 */
 	use \Mediavine\MCP\Traits\Singleton;
 
-	const VERSION = '2.10.5';
+	const VERSION = '2.10.6';
 
 	/**
 	 * This gets updated automatically in WriteVersionTask.
 	 */
-	const DB_VERSION = '2.10.5';
+	const DB_VERSION = '2.10.6';
 
 	const PLUGIN_DOMAIN = 'mv_control_panel';
 
@@ -240,11 +240,11 @@ class MV_Control_Panel {
 	 * Add class 'mv-content-wrapper' to all posts' wrappers for ad targeting.
 	 *
 	 * @param array  $classes Classes to be used.
-	 * @param string $class Class being added when filter triggered. (Not used).
+	 * @param string $classname Class being added when filter triggered. (Not used).
 	 * @param int    $post_id Current post. (Not used).
 	 * @return array Classes to be used.
 	 */
-	public function add_post_class( $classes, $class, $post_id ) {
+	public function add_post_class( $classes, $classname, $post_id ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter
 		if ( is_singular() && ! in_array( 'mv-content-wrapper', $classes, true ) ) {
 			$classes[] = 'mv-content-wrapper';
 		}
