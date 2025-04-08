@@ -10,7 +10,6 @@ return array(
     'Mediavine\\MCP\\AdSettings' => $baseDir . '/src/AdSettings.php',
     'Mediavine\\MCP\\AdminInit' => $baseDir . '/src/AdminInit.php',
     'Mediavine\\MCP\\AdsTxt' => $baseDir . '/src/AdsTxt.php',
-    'Mediavine\\MCP\\Debug' => $baseDir . '/src/Debug.php',
     'Mediavine\\MCP\\MV_Control_Panel' => $baseDir . '/src/MV_Control_Panel.php',
     'Mediavine\\MCP\\Menu' => $baseDir . '/src/Menu.php',
     'Mediavine\\MCP\\Migration' => $baseDir . '/src/Migration.php',

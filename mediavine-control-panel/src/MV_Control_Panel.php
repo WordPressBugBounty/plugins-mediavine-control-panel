@@ -25,12 +25,12 @@ class MV_Control_Panel {
 	 */
 	use \Mediavine\MCP\Traits\Singleton;
 
-	const VERSION = '2.10.6';
+	const VERSION = '2.10.7';
 
 	/**
 	 * This gets updated automatically in WriteVersionTask.
 	 */
-	const DB_VERSION = '2.10.6';
+	const DB_VERSION = '2.10.7';
 
 	const PLUGIN_DOMAIN = 'mv_control_panel';
 
@@ -258,7 +258,6 @@ class MV_Control_Panel {
 	 */
 	private function load_extensions() {
 		Security::get_instance();
-		Debug::get_instance();
 		Migration::get_instance();
 	}
 

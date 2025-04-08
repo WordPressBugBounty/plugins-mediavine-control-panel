@@ -50,7 +50,6 @@ class ComposerStaticInitb77ce61001d82f744adb44aaa5b031fd
         'Mediavine\\MCP\\AdSettings' => __DIR__ . '/../..' . '/src/AdSettings.php',
         'Mediavine\\MCP\\AdminInit' => __DIR__ . '/../..' . '/src/AdminInit.php',
         'Mediavine\\MCP\\AdsTxt' => __DIR__ . '/../..' . '/src/AdsTxt.php',
-        'Mediavine\\MCP\\Debug' => __DIR__ . '/../..' . '/src/Debug.php',
         'Mediavine\\MCP\\MV_Control_Panel' => __DIR__ . '/../..' . '/src/MV_Control_Panel.php',
         'Mediavine\\MCP\\Menu' => __DIR__ . '/../..' . '/src/Menu.php',
         'Mediavine\\MCP\\Migration' => __DIR__ . '/../..' . '/src/Migration.php',
