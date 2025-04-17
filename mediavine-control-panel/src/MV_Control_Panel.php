@@ -25,12 +25,12 @@ class MV_Control_Panel {
 	 */
 	use \Mediavine\MCP\Traits\Singleton;
 
-	const VERSION = '2.10.7';
+	const VERSION = '2.10.8';
 
 	/**
 	 * This gets updated automatically in WriteVersionTask.
 	 */
-	const DB_VERSION = '2.10.7';
+	const DB_VERSION = '2.10.8';
 
 	const PLUGIN_DOMAIN = 'mv_control_panel';
 
@@ -345,6 +345,7 @@ class MV_Control_Panel {
 					'src'    => 'https://scripts.' . $offering_domain . '/tags/' . $site_id . '.js',
 					'attr'   => array(
 						'async'          => 'async',
+						'fetchpriority'  => 'high',
 						'data-noptimize' => '1',
 						// This disables Cloudflare Rocket Loader.
 						// @see https://support.cloudflare.com/hc/en-us/articles/200169436-How-can-I-have-Rocket-Loader-ignore-specific-JavaScripts- .

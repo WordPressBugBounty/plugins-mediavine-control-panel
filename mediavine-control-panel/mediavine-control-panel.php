@@ -11,7 +11,7 @@
  * Plugin Name: Mediavine Control Panel
  * Plugin URI: https://www.mediavine.com/
  * Description: Manage your ads, analytics and more with our lightweight plugin!
- * Version: 2.10.7
+ * Version: 2.10.8
  * Requires at least: 5.2
  * Requires PHP: 7.3
  * Author: Mediavine

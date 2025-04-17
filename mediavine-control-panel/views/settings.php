@@ -100,7 +100,7 @@ if ( ! $has_loaded_before && ! empty( $option->get_option( 'site_id' ) ) ) {
 	<?php submit_button(); ?>
 
 	<div class="option-group">
-		<div id="MVIntercomWidget"></div>
+		<div id="MVChatWidget"></div>
 	</div>
 
 </form>

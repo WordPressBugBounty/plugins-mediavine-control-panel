@@ -3,7 +3,7 @@ Contributors: mediavine
 Donate link: https://www.mediavine.com
 Tags: advertising, mediavine
 Requires at least: 5.2
-Tested up to: 6.7.2
+Tested up to: 6.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -53,6 +53,11 @@ assist you with verification, CVE assignment, and notify the
 developers of this plugin.
 
 == Changelog ==
+
+= 2.10.8 =
+
+- CHANGED:  Replace IC chatbot with HubSpot chatbot for support on the MCP Settings page.
+- FIXED: Load Mediavine Ad Script more quickly.
 
 = 2.10.7 =
 
