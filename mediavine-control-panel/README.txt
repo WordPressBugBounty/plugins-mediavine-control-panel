@@ -54,6 +54,10 @@ developers of this plugin.
 
 == Changelog ==
 
+= 2.10.9 =
+
+- FIXED: Use aspect ratio and jsonLd options to adjust video block attributes.
+
 = 2.10.8 =
 
 - CHANGED:  Replace IC chatbot with HubSpot chatbot for support on the MCP Settings page.

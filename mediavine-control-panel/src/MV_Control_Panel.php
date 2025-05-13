@@ -25,12 +25,12 @@ class MV_Control_Panel {
 	 */
 	use \Mediavine\MCP\Traits\Singleton;
 
-	const VERSION = '2.10.8';
+	const VERSION = '2.10.9';
 
 	/**
 	 * This gets updated automatically in WriteVersionTask.
 	 */
-	const DB_VERSION = '2.10.8';
+	const DB_VERSION = '2.10.9';
 
 	const PLUGIN_DOMAIN = 'mv_control_panel';
 

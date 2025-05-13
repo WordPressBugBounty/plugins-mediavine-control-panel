@@ -3,7 +3,7 @@
         'name' => 'mediavine/mediavine-control-panel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '119d26214da17d5a95fdbe31d982641f5b1781e6',
+        'reference' => 'e7e20f56f675f9879e104f1ff9c6f18eac9d45ee',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'mediavine/mediavine-control-panel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '119d26214da17d5a95fdbe31d982641f5b1781e6',
+            'reference' => 'e7e20f56f675f9879e104f1ff9c6f18eac9d45ee',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
