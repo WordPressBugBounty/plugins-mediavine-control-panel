@@ -54,6 +54,10 @@ developers of this plugin.
 
 == Changelog ==
 
+= 2.10.10 =
+
+- NEW: Added a `data-mv-mcp` attribute carrying the plugin version to the script wrapper tag so external tooling can identify the plugin.
+
 = 2.10.9 =
 
 - FIXED: Use aspect ratio and jsonLd options to adjust video block attributes.

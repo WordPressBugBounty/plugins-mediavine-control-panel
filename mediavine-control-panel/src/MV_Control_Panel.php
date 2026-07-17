@@ -25,12 +25,12 @@ class MV_Control_Panel {
 	 */
 	use \Mediavine\MCP\Traits\Singleton;
 
-	const VERSION = '2.10.9';
+	const VERSION = '2.10.10';
 
 	/**
 	 * This gets updated automatically in WriteVersionTask.
 	 */
-	const DB_VERSION = '2.10.9';
+	const DB_VERSION = '2.10.10';
 
 	const PLUGIN_DOMAIN = 'mv_control_panel';
 
@@ -350,6 +350,9 @@ class MV_Control_Panel {
 						// This disables Cloudflare Rocket Loader.
 						// @see https://support.cloudflare.com/hc/en-us/articles/200169436-How-can-I-have-Rocket-Loader-ignore-specific-JavaScripts- .
 						'data-cfasync'   => 'false',
+						// Identifies the tag as output by MCP (vs Grow for WP or a
+						// hand-pasted embed) so external tooling can detect the plugin.
+						'data-mv-mcp'    => self::VERSION,
 					),
 				)
 			);
