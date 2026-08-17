@@ -660,7 +660,7 @@ class AdsTxt {
 	 * Defines an ajax callback to force a recheck of the ads.txt method.
 	 */
 	public function force_recheck_ads_txt_ajax() {
-		check_ajax_referer( 'recheck-ad-text' );
+		Security::verify_admin_ajax_request( 'recheck-ad-text' );
 		$method = $this->force_recheck_ads_txt_method();
 		$data   = array( 'method' => $method );
 		$this->respond_json_and_die( $data );
@@ -670,7 +670,7 @@ class AdsTxt {
 	 * Defines an ajax callback to enable ads.txt support.
 	 */
 	public function enable_ad_text_ajax() {
-		check_ajax_referer( 'enable-ad-text' );
+		Security::verify_admin_ajax_request( 'enable-ad-text' );
 		$data           = $this->enable_ad_text();
 		$data['method'] = $this->get_ads_txt_method();
 		$this->respond_json_and_die( $data );
@@ -680,7 +680,7 @@ class AdsTxt {
 	 * Defines an ajax callback to disable ads.txt support.
 	 */
 	public function disable_ad_text_ajax() {
-		check_ajax_referer( 'disable-ad-text' );
+		Security::verify_admin_ajax_request( 'disable-ad-text' );
 		$worked = $this->disable_adstxt();
 		$this->remove_adstxt();
 		Option::get_instance()->update_option( 'adtext_disabled', true );
@@ -693,7 +693,7 @@ class AdsTxt {
 	 * Defines an ajax callback to write ads.txt.
 	 */
 	public function write_ad_text_ajax() {
-		check_ajax_referer( 'write-ad-text' );
+		Security::verify_admin_ajax_request( 'write-ad-text' );
 		$worked = $this->write_ad_text_file();
 		$this->remove_if_empty();
 		$data = array( 'error' => $worked );

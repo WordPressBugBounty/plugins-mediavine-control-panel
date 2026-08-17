@@ -54,6 +54,10 @@ developers of this plugin.
 
 == Changelog ==
 
+= 2.10.11 =
+
+- FIXED: Added capability checks to plugin settings endpoints to address a broken access control vulnerability.
+
 = 2.10.10 =
 
 - NEW: Added a `data-mv-mcp` attribute carrying the plugin version to the script wrapper tag so external tooling can identify the plugin.

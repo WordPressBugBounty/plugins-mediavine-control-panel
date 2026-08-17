@@ -10,7 +10,8 @@ use Mediavine\MCP\Upstream;
 ?>
 
 
-<?php if ( Upstream::has_just_left_launch_mode() && current_user_can( 'manage_options' ) ) : ?>
+<?php // Capability first: has_just_left_launch_mode() marks the notice as seen. ?>
+<?php if ( current_user_can( 'manage_options' ) && Upstream::has_just_left_launch_mode() ) : ?>
 	<div class="option-group launch-mode-group">
 		<div class="notice notice-success is-dismissible">
 			<p>Congrats on launching with Mediavine! Make sure to clear your site cache/caching plugins if you have any and let your Launch Specialist know once you&rsquo;ve done this.</p>

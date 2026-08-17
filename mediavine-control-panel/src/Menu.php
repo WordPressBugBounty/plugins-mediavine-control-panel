@@ -81,35 +81,40 @@ class Menu {
 	 * Register and enqueue settings page assets.
 	 */
 	public function enqueue_settings_assets() {
-		// Add launch mode settings javascript.
-		$url    = MCP_PLUGIN_URL . 'assets/js/admin-launch-settings.js';
-		$handle = MV_Control_Panel::PLUGIN_DOMAIN . '-admin-launch-settings-script';
-		wp_register_script( $handle, $url, array(), MV_Control_Panel::VERSION, true );
-		wp_localize_script(
-			$handle,
-			'mcpLaunchSettings',
-			array(
-				'refreshLaunchModeNonce' => wp_create_nonce( 'refresh-launch-mode' ),
-				'disableLaunchModeNonce' => wp_create_nonce( 'disable-launch-mode' ),
-			)
-		);
-		wp_enqueue_script( $handle );
+		// These scripts only drive controls the settings page renders for users
+		// who can manage options, so nobody else needs the scripts or the
+		// nonces they carry.
+		if ( current_user_can( Security::MANAGE_SETTINGS_CAPABILITY ) ) {
+			// Add launch mode settings javascript.
+			$url    = MCP_PLUGIN_URL . 'assets/js/admin-launch-settings.js';
+			$handle = MV_Control_Panel::PLUGIN_DOMAIN . '-admin-launch-settings-script';
+			wp_register_script( $handle, $url, array(), MV_Control_Panel::VERSION, true );
+			wp_localize_script(
+				$handle,
+				'mcpLaunchSettings',
+				array(
+					'refreshLaunchModeNonce' => wp_create_nonce( 'refresh-launch-mode' ),
+					'disableLaunchModeNonce' => wp_create_nonce( 'disable-launch-mode' ),
+				)
+			);
+			wp_enqueue_script( $handle );
 
-		// Add adstxt settings javascript.
-		$url    = MCP_PLUGIN_URL . 'assets/js/admin-adstxt-settings.js';
-		$handle = MV_Control_Panel::PLUGIN_DOMAIN . '-admin-adstxt-settings-script';
-		wp_register_script( $handle, $url, array(), MV_Control_Panel::VERSION, true );
-		wp_localize_script(
-			$handle,
-			'mcpAdsTxtSettings',
-			array(
-				'recheckAdTextNonce' => wp_create_nonce( 'recheck-ad-text' ),
-				'writeAdTextNonce'   => wp_create_nonce( 'write-ad-text' ),
-				'enableAdTextNonce'  => wp_create_nonce( 'enable-ad-text' ),
-				'disableAdTextNonce' => wp_create_nonce( 'disable-ad-text' ),
-			)
-		);
-		wp_enqueue_script( $handle );
+			// Add adstxt settings javascript.
+			$url    = MCP_PLUGIN_URL . 'assets/js/admin-adstxt-settings.js';
+			$handle = MV_Control_Panel::PLUGIN_DOMAIN . '-admin-adstxt-settings-script';
+			wp_register_script( $handle, $url, array(), MV_Control_Panel::VERSION, true );
+			wp_localize_script(
+				$handle,
+				'mcpAdsTxtSettings',
+				array(
+					'recheckAdTextNonce' => wp_create_nonce( 'recheck-ad-text' ),
+					'writeAdTextNonce'   => wp_create_nonce( 'write-ad-text' ),
+					'enableAdTextNonce'  => wp_create_nonce( 'enable-ad-text' ),
+					'disableAdTextNonce' => wp_create_nonce( 'disable-ad-text' ),
+				)
+			);
+			wp_enqueue_script( $handle );
+		}
 
 		// Add admin settings page stylesheet.
 		$url    = MCP_PLUGIN_URL . 'assets/css/admin-settings.css';

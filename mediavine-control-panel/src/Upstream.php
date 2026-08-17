@@ -383,7 +383,7 @@ class Upstream {
 	 * Ajax handler for clicking "Disable Launch Mode" button in WP Dashboard.
 	 */
 	public function clicked_disable_launch_mode_button() {
-		check_ajax_referer( 'disable-launch-mode' );
+		Security::verify_admin_ajax_request( 'disable-launch-mode' );
 		$this->disable_launch_mode();
 	}
 
@@ -422,7 +422,7 @@ class Upstream {
 	 * Ajax handler for clicking "Refresh Launch Mode" button in admin settings.
 	 */
 	public function handle_refresh_launch_mode_button() {
-		check_ajax_referer( 'refresh-launch-mode' );
+		Security::verify_admin_ajax_request( 'refresh-launch-mode' );
 
 		// Force the synchronous launch mode check.
 		self::get_instance()->check_mode_task();
