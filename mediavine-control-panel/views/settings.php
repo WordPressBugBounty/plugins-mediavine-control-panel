@@ -58,7 +58,7 @@ if ( ! $has_loaded_before && ! empty( $option->get_option( 'site_id' ) ) ) {
 				<input type="text" name="<?php echo esc_attr( $option->get_key( 'site_id' ) ); ?>" value="<?php echo esc_attr( $option->get_option( 'site_id' ) ); ?>"/>
 			</div>
 			<div class="description">
-				The unique identifier Mediavine has given your blog. This can be found in the Ad Setup tab of your <a href="https://dashboard.mediavine.com" target="_blank">Mediavine Dashboard,</a> and will look like this: food-fanatic, my-baking-addiction, etc
+				The unique identifier Mediavine has given your blog. This can be found in the Ad Setup tab of your <a href="https://publishers.mediavine.com/" target="_blank">Mediavine Dashboard</a>.
 			</div>
 		</section>
 		<section class="mvoption">

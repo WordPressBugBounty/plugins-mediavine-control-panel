@@ -54,6 +54,14 @@ developers of this plugin.
 
 == Changelog ==
 
+= 2.10.13 =
+
+- FIXED: The video and playlist blocks now ask you to sign in when you are logged out or your login has expired, instead of showing "Something went wrong".
+- FIXED: Users without video access for the site now see why, instead of "Something went wrong".
+- FIXED: Sign-in and logout links now work on WordPress installs in a subfolder.
+- FIXED: Updated outdated help article links on the settings page.
+- CHANGED: The Site ID description now links to the current Mediavine Dashboard and no longer shows example IDs.
+
 = 2.10.12 =
 
 - CHANGED: Bumped tested-up-to version to WordPress 7.1.

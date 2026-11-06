@@ -29,7 +29,7 @@ $option  = Option::get_instance();
 
 	<section class="mvoption">
 		<div id="mcp_adstxt" class="<?php print esc_attr( $ads_txt->is_ads_txt_handling_enabled() ? 'mcp-adstxt-enabled' : 'mcp-adstxt-disabled' ); ?>  <?php print esc_attr( 'mcp-adstxt-method-' . $ads_txt->get_ads_txt_method() ); ?>">
-			<p>We support the <a href="https://help.mediavine.com/advanced/setting-up-your-adstxt-file" target="_blank">Ads.txt</a> feature, protecting your site against ad fraud.</p>
+			<p>We support the <a href="https://help.mediavine.com/setting-up-your-ads-txt-file" target="_blank">Ads.txt</a> feature, protecting your site against ad fraud.</p>
 
 			<div id="mv_adstxt_notifications" class="mcp-margin-bottom">
 			</div>

@@ -29,7 +29,7 @@ $option = Option::get_instance();
 				&nbsp;<label for="<?php echo esc_attr( $option->get_key( 'video_sitemap_enabled' ) ); ?>"><?php esc_html_e( 'Enable Video Sitemap', 'mediavine' ); ?></label>
 			</div>
 			<div class="description">
-				<p>Adds a redirect for a <a href="https://help.mediavine.com/en/articles/3287036-mediavine-video-sitemaps" target="_blank">Google Video Sitemap</a> at <a href="<?php echo esc_attr( home_url( '/mv-video-sitemap' ) ); ?>" target="_blank"><?php echo esc_html( home_url( '/mv-video-sitemap' ) ); ?></a>. Disabling this setting will remove the redirect. Any browsers that have previously visited the url will need to clear their browser cache to remove the saved redirect.</p>
+				<p>Adds a redirect for a <a href="https://help.mediavine.com/mediavine-video-sitemaps" target="_blank">Google Video Sitemap</a> at <a href="<?php echo esc_attr( home_url( '/mv-video-sitemap' ) ); ?>" target="_blank"><?php echo esc_html( home_url( '/mv-video-sitemap' ) ); ?></a>. Disabling this setting will remove the redirect. Any browsers that have previously visited the url will need to clear their browser cache to remove the saved redirect.</p>
 			</div>
 
 		</section>
